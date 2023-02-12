@@ -2,7 +2,7 @@
   "name": "realtime-twitch-chat-in-discord",
   "version": "1.0.0",
   "private": true,
-  "description": "Realtime Twitch Chat in Discord",
+  "description": "Real-time Twitch Chat in Discord",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsup src/main.ts",
