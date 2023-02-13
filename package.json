@@ -18,6 +18,7 @@
   "dependencies": {
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
+    "tmi.js": "^1.8.5",
     "zod": "^3.20.6"
   }
 }
