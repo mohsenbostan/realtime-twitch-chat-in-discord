@@ -9,6 +9,7 @@ dotenv.config();
 const configSchema = z.object({
   DISCORD_CHANNEL_ID: z.string(),
   DISCORD_TOKEN: z.string(),
+  TWITCH_CHANNELS: z.string(),
 });
 
 const config = configSchema.parse(process.env);
@@ -20,7 +21,7 @@ discordClient.on("ready", async (client) => {
   console.info("Discord Bot Connected...");
 
   const twitchClient = new tmi.Client({
-    channels: ["homelessdev"],
+    channels: config.TWITCH_CHANNELS.split(","),
   });
 
   await twitchClient.connect().catch(console.error);
